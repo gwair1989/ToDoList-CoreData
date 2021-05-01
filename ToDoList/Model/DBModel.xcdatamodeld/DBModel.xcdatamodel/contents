@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AHCategory" representedClassName=".AHCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="listRelationship" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="List" inverseName="catRelationship" inverseEntity="List"/>
+    </entity>
+    <entity name="List" representedClassName=".List" syncable="YES" codeGenerationType="class">
+        <attribute name="isCheck" attributeType="Boolean" usesScalarValueType="YES" spotlightIndexingEnabled="YES"/>
+        <attribute name="item" optional="YES" attributeType="String"/>
+        <relationship name="catRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AHCategory" inverseName="listRelationship" inverseEntity="AHCategory"/>
+    </entity>
+    <elements>
+        <element name="AHCategory" positionX="-342.252685546875" positionY="-7.65582275390625" width="128" height="73"/>
+        <element name="List" positionX="-57.8671875" positionY="-22.530517578125" width="128" height="88"/>
+    </elements>
+</model>
